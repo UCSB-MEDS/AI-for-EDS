@@ -5,9 +5,9 @@ title-block-banner: false
 toc: false
 ---
 
-::: {.center-text}
+<!-- ::: {.center-text}
 ![](images/bren-meds-hex.png){width="25%" fig-alt="Alt text here."}
-:::
+::: -->
 
 <!-- ::: {.center-text .gray-text}
 *Add your own relevant image to the `images/` folder, then update the file name in `index.qmd` so that it points to the correct image.* 

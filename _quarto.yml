@@ -15,6 +15,8 @@ website:
     right:
       - href: index.qmd
         text: home
+      - icon: github
+        href: https://github.com/UCSB-MEDS/AI-for-EDS
       # - text: syllabus
       #   href: https://docs.google.com/document/d/1hoo2DEroXlqBhhc6LmnsYFe8_7IbHny5yk7yXLfQp-4/edit?usp=sharing
       #   target: _blank
@@ -33,12 +35,6 @@ website:
       #     - text: MEDS installation guide
       #       href: https://ucsb-meds.github.io/MEDS-installation-guide/
       #       target: _blank
-      - icon: github
-        menu:
-          - text: Source Code
-            url: https://github.com/UCSB-MEDS/AI-for-EDS
-          - text: Report a Bug
-            url: https://github.com/UCSB-MEDS/AI-for-EDS/issues
   page-footer:
     background: dark
     right: This website is built with [{{< fa brands github title="the github octocat logo" >}}](https://github.com/UCSB-MEDS/AI-for-EDS) and [Quarto](https://quarto.org/)

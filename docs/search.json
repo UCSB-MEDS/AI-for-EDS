@@ -7,10 +7,24 @@
     "text": "Consider adding helpful resources (e.g. online text books, blogs, people in the field to follow, videos, etc.) here. See EDS 240’s resources page as an example."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#workshop-series-description",
+    "href": "index.html#workshop-series-description",
     "title": "AI for Environmental Data Science",
-    "section": "",
-    "text": "Slides\n Supplemental Materials\n Description\n\n\n\n\nTeach Me How to Google\nNA\nThe case for debugging & search skills in the age of AI + tips on how to do so effectively\n\n\nAI Workshop #1\ntbd\ntbd\n\n\nAI Workshop #2\ntbd\ntbd"
+    "section": "Workshop Series Description",
+    "text": "Workshop Series Description\n[add workshop series description + MEDS guiding principles here]"
+  },
+  {
+    "objectID": "index.html#workshop-materials",
+    "href": "index.html#workshop-materials",
+    "title": "AI for Environmental Data Science",
+    "section": "Workshop Materials",
+    "text": "Workshop Materials\n\n\n\n\n\n\n\n\n\n Quarter\n Slides\n Supplemental Materials\n Description\n\n\n\n\nSummer\nTeach Me How to Google\nNA\nThe case for debugging & search skills in the age of AI + tips on how to do so effectively\n\n\nWinter\nAI Workshop #1\ncoming soon\ncoming soon\n\n\nWinter\nAI Workshop #2\ncoming soon\ncoming soon\n\n\nWinter\nAI Workshop #3\ncoming soon\ncoming soon"
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "AI for Environmental Data Science",
+    "section": "Contributors",
+    "text": "Contributors\nThese workshop materials were developed by Carmen Galaz García (Bren Teaching Faculty), Kat Le (Technical Applications Manager), and Sam Shanny-Csik (Data Science Programs Manager & Lecturer). We draw on materials and approaches from a variety of sources, leaning heavily on discussions with other Bren Faculty and education efforts by folks at NCEAS and the UCSB Office of Teaching and Learning."
   }
 ]

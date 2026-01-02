@@ -5,24 +5,31 @@ title-block-banner: false
 toc: false
 ---
 
-<!-- ::: {.center-text}
-![](images/bren-meds-hex.png){width="25%" fig-alt="Alt text here."}
-::: -->
+::: {.center-text}
+![](images/digital-earth.png){width="80%" fig-alt="Alt text here."}
+::: 
 
-<!-- ::: {.center-text .gray-text}
-*Add your own relevant image to the `images/` folder, then update the file name in `index.qmd` so that it points to the correct image.* 
-::: -->
+::: {.center-text .gray-text}
+*Image source: [NCEAS](https://www.nceas.ucsb.edu/news/closing-gap-how-nceas-using-ai-unlock-full-potential-biodiversity-monitoring){target="_blank}* 
+::: 
 
-<br>
+## Workshop Series Description 
 
-| {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Slides | {{< fa file-code title="A code file" >}} Supplemental Materials | {{< fa pen title="a pen" >}} Description |
-|------------------------------------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------|
-| [Teach Me How to Google](https://ucsb-meds.github.io/teach-me-how-to-google/#/title-slide){target="_blank"}  | *NA* | The case for debugging & search skills in the age of AI + tips on how to do so effectively |
-| [AI Workshop #1](https://docs.google.com/presentation/d/16vvfAapf7x4q9i5nns_cTjlNzAWn0x_QTmL5NwDxWIY/edit?usp=sharing){target="_blank"}  | tbd | tbd |
-| [AI Workshop #2](https://docs.google.com/presentation/d/1BteWC30xfnUwh08afK6biUA-iLiqe6Vk9N-vFDLIdFg/edit?usp=sharing){target="_blank"}  | tbd | tbd |
-: {.hover .bordered tbl-colwidths="[25,25,50]"}
+[add workshop series description + MEDS guiding principles here]
 
+## Workshop Materials
 
+| {{< fa calendar title="calendar" >}} Quarter | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Slides | {{< fa file-code title="A code file" >}} Supplemental Materials | {{< fa pen title="a pen" >}} Description |
+|----|------------------------------------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------|
+| Summer | [Teach Me How to Google](https://ucsb-meds.github.io/teach-me-how-to-google/#/title-slide){target="_blank"}  | *NA* | The case for debugging & search skills in the age of AI + tips on how to do so effectively |
+| Winter | [AI Workshop #1](https://docs.google.com/presentation/d/16vvfAapf7x4q9i5nns_cTjlNzAWn0x_QTmL5NwDxWIY/edit?usp=sharing){target="_blank"}  | *coming soon* | *coming soon* |
+| Winter | [AI Workshop #2](https://docs.google.com/presentation/d/1BteWC30xfnUwh08afK6biUA-iLiqe6Vk9N-vFDLIdFg/edit?usp=sharing){target="_blank"}  | *coming soon* | *coming soon* |
+| Winter | AI Workshop #3  | *coming soon* | *coming soon* |
+: {.hover .bordered tbl-colwidths="[10,20,20,50]"}
+
+## Contributors
+
+These workshop materials were developed by [Carmen Galaz García](https://bren.ucsb.edu/people/carmen-galaz-garcia-0){target="_blank"} (Bren Teaching Faculty), [Kat Le](https://bren.ucsb.edu/people/kat-le){target="_blank"} (Technical Applications Manager), and [Sam Shanny-Csik](https://bren.ucsb.edu/people/samantha-shanny-csik){target="_blank"} (Data Science Programs Manager & Lecturer). We draw on materials and approaches from a variety of sources, leaning heavily on discussions with other Bren Faculty and education efforts by folks at [NCEAS](https://www.nceas.ucsb.edu/){target="_blank"} and the [UCSB Office of Teaching and Learning](https://otl.ucsb.edu/cop/artificial-intelligence-community-practice){target="_blank"}. 
 
 <!-- ## Course Description
 

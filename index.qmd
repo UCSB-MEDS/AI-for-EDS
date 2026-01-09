@@ -13,18 +13,19 @@ toc: false
 *Image source: [NCEAS](https://www.nceas.ucsb.edu/news/closing-gap-how-nceas-using-ai-unlock-full-potential-biodiversity-monitoring){target="_blank}* 
 ::: 
 
-## Workshop Series Description 
+## Description 
 
-[add workshop series description + MEDS guiding principles here]
+The MEDS AI for Environmental Data Science Workshop Series aims to guide students on using generative AI tools thoughtfully and professionally, without replacing the core skills needed to succeed as an environmental data scientist. Workshops are scaffolded across the program, emphasizing strong foundations early and guided AI use as skills develop.
+
+Students will learn to engage with AI in ways that are **critical**, **responsible**, and **efficient**. The goal is to prepare students to navigate AI use confidently across coursework, job interviews, and professional settings.
 
 ## Workshop Materials
 
 | {{< fa calendar title="calendar" >}} Quarter | {{< fa person-chalkboard title="A person motioning at a chalkboard" >}} Slides | {{< fa file-code title="A code file" >}} Supplemental Materials | {{< fa pen title="a pen" >}} Description |
 |----|------------------------------------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------|
 | Summer | [Teach Me How to Google](https://ucsb-meds.github.io/teach-me-how-to-google/#/title-slide){target="_blank"}  | *NA* | The case for debugging & search skills in the age of AI + tips on how to do so effectively |
-| Winter | [AI Workshop #1](https://docs.google.com/presentation/d/16vvfAapf7x4q9i5nns_cTjlNzAWn0x_QTmL5NwDxWIY/edit?usp=sharing){target="_blank"}  | *coming soon* | *coming soon* |
-| Winter | [AI Workshop #2](https://docs.google.com/presentation/d/1BteWC30xfnUwh08afK6biUA-iLiqe6Vk9N-vFDLIdFg/edit?usp=sharing){target="_blank"}  | *coming soon* | *coming soon* |
-| Winter | AI Workshop #3  | *coming soon* | *coming soon* |
+| Winter | [AI for EDS: Intro to LLMs & Prompting Fundamentals](https://docs.google.com/presentation/d/16vvfAapf7x4q9i5nns_cTjlNzAWn0x_QTmL5NwDxWIY/edit?usp=sharing){target="_blank"}  | *coming soon* | An introduction to large language models (LLMs), their environmental and ethical considerations, and how to write effective prompts |
+| Winter | [AI for EDS: GitHub Copilot & Reproducible Python Projects](https://docs.google.com/presentation/d/1BteWC30xfnUwh08afK6biUA-iLiqe6Vk9N-vFDLIdFg/edit?usp=sharing){target="_blank"}  | *coming soon* | *coming soon* |
 : {.hover .bordered tbl-colwidths="[10,20,20,50]"}
 
 ## Contributors

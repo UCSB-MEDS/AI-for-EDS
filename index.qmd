@@ -25,7 +25,7 @@ Students will learn to engage with AI in ways that are **critical**, **responsib
 |----|------------------------------------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------|
 | Summer | [Teach Me How to Google](https://ucsb-meds.github.io/teach-me-how-to-google/#/title-slide){target="_blank"}  | *NA* | The case for debugging & search skills in the age of AI + tips on how to do so effectively |
 | Winter | [AI for EDS: Intro to LLMs & Prompting Fundamentals](https://docs.google.com/presentation/d/16vvfAapf7x4q9i5nns_cTjlNzAWn0x_QTmL5NwDxWIY/edit?usp=sharing){target="_blank"}  | [GenAI demo binder](https://github.com/carmengg/code-for-genAI-demo?tab=readme-ov-file#whats-in-this-repo){target="_blank"} | An introduction to large language models (LLMs), their environmental and ethical considerations, and how to write effective prompts |
-| Winter | [AI for EDS: GitHub Copilot & Reproducible Python Projects](https://docs.google.com/presentation/d/1BteWC30xfnUwh08afK6biUA-iLiqe6Vk9N-vFDLIdFg/edit?usp=sharing){target="_blank"}  | *coming soon* | *coming soon* |
+| Winter | [AI for EDS: GitHub Copilot & Reproducible Python Projects](https://docs.google.com/presentation/d/1BteWC30xfnUwh08afK6biUA-iLiqe6Vk9N-vFDLIdFg/edit?usp=sharing){target="_blank"}  | [GitHub Copilot demo repo](https://github.com/UCSB-MEDS/AI-for-EDS-workshop-2){target="_blank"} | An introduction to GitHub Copilot, best practices for responsible use, and practical tips for integrating it into your workflow |
 : {.hover .bordered tbl-colwidths="[10,20,20,50]"}
 
 ## Contributors

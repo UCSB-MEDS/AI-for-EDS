@@ -192,7 +192,7 @@ The model's **working memory** for one request, measured in tokens. Everything b
 :::
 
 ::: {.callout-note}
-Window sizes vary widely by model and tool, and change often. Check the docs for the one you use.
+Window sizes vary widely by model and tool, and change often.
 :::
 
 ## What's in the context window? {.smaller}
@@ -361,6 +361,7 @@ head(squirrels, 5) |> knitr::kable() # a few example rows
 dput(head(squirrels, 5))           # reproducible snippet it can run
 ```
 
+
 ::: {.columns}
 ::: {.column width="50%"}
 **Do**
@@ -459,9 +460,6 @@ Rude prompts scored ~4 points higher.
 
 . . .
 
-::: {.callout-note}
-**Takeaway:** Tone is a variable. Directness beats deference. Hostility isn't the skill — *clarity* is.
-:::
 
 ::: {.notes}
 Good discussion prompt: how would you design a study to separate "rude" from "concise"? This is a reproducibility lesson too: a single-model, single-run result is a hypothesis, not a rule.
@@ -610,8 +608,6 @@ Advance three times: data manager, then data science student, then environmental
 
 **Goal:** turn a weak prompt into a strong one, and *measure* the difference.
 
-**Task:** create a numeric height column from the squirrel census's messy height values (ranges like '6–18', free text, blanks).
-
 ::: {.round-grid}
 ::: {.round}
 [Round 1 · 3 min]{.round-tag}
@@ -643,11 +639,13 @@ Objective 3: check the code against the data
 :::
 :::
 
-[Pairs · ~20 minutes · start a **fresh chat** for each round · use **claude.ai** in your browser or the Claude desktop app]{.activity-time}
+::: {.callout-note icon="false"}
+## {{< fa screwdriver-wrench >}} Setup
 
-::: {.notes}
-Pairs: one person types, one keeps score. Fresh chat each round so earlier rounds don't leak context. Download activity-starter.R before starting.
+Download and unzip this [folder]() to get started on the activity. Open the folder in Positron, and open *claude.ai* in your browser or the Claude desktop app.
 :::
+
+
 
 ## The prompts {.act-prompts .smaller}
 
@@ -794,26 +792,23 @@ Write it down once: agentic coding and skills
 
 In the activity, every round you:
 
-::: {.columns}
-::: {.column width="50%"}
+
 - pasted the same `glimpse()` output
 - retyped "keep the original column"
 - copied code from chat into R
 - ran the check yourself
-:::
 
-::: {.column width="50%"}
+
 ::: {.callout-important}
-## Two questions
-1. What if the assistant could **run the code and the check itself**?
-2. What if you wrote your context and rules **once**, and it reused them every time?
-:::
-:::
+##  
+What if the assistant could **run the code and the check itself**?
+
+
 :::
 
 . . .
 
-That's **agentic coding** (1) and **skills** (2).
+That's **agentic coding**.
 
 ## Chat assistant vs. coding agent
 
@@ -860,6 +855,8 @@ An agent can act on your files, so the fundamentals matter **more**, not less.
 | **Small steps** | "Do step 1 only" | Ask for a plan first, approve it, then let it work |
 | **Surface assumptions** | "List your assumptions" | Built into the skill: *before writing code…* |
 | **Verify** | You run the check | It runs the check script; you review the diff |
+
+<!--
 
 ## What is a skill? {.smaller}
 
@@ -946,7 +943,7 @@ Rounds 2–4 of the activity, written down once. It's in this repo at `.claude/s
 **Verify.** Row counts, NA counts, tests. You're the scientist.
 :::
 :::
-
+-->
 ## References {.smaller}
 
 - Dobariya, O., & Kumar, A. (2025). *Mind Your Tone: Investigating How Prompt Politeness Affects LLM Accuracy.* arXiv:2510.04950. <https://arxiv.org/abs/2510.04950>

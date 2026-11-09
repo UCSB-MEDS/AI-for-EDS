@@ -716,16 +716,15 @@ You're ready when `glimpse(squirrels)` runs without error.
 5. Fill in your Round 2 scorecard row
 
 
-### Round 3
+### Round 3 {.smaller}
+
 
 **Steps:**
 
 1. Start a **fresh chat**
 2. Send the Round 2 prompt plus the addition below
 
-  > Prompt: **Round 2 prompt +:**
-
-> **Before writing any code**, list every distinct kind of value in the `above_ground_height_in_feet` column, how you plan to convert each one, and anything you're unsure about. Wait for my answer.
+> **Before writing any code**, describe the different value formats or patterns you observe in the above_ground_height_in_feet column (e.g.   plain numbers, ranges, text annotations), how you plan to handle each one, and anything you're unsure about. Wait for my answer.
 
 3. Read the model's list of assumptions and answer any questions it asks before it writes code (e.g. *"For ranges like '6–18', should I take the lower bound, upper bound, or midpoint?"*)
 4. Once you've answered, tell Claude: *"Now write the code."*
@@ -748,7 +747,6 @@ check_cleaning(squirrels, clean_r3, height_col)
 2. Compare the two outputs. Which round created more NAs?
 3. Back in Claude, ask: *"Which values in `above_ground_height_in_feet` does your code turn into NA? List them."*
 4. Does its answer match what `check_cleaning()` showed?
-5. Fill in the Round 4 column on your scorecard
 
 :::
 

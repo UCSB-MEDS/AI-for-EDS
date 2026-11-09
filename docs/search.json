@@ -60,7 +60,7 @@
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#tokens-how-the-model-reads-text",
     "title": "AI for EDS",
     "section": "Tokens: how the model reads text",
-    "text": "Tokens: how the model reads text\nModels don’t read words or characters. They read tokens.\n\nThesquirrelranuptheoaktree.\n\n\nIllustrative split. The exact tokens depend on each model’s tokenizer.\n\n\n\nRules of thumb (English text)\n\nOne token is roughly ¾ of a word\nCommon words are one token; rare words, numbers and code split into several\nTools limit and bill usage in tokens\n\n\nWhy it matters for data work\n\nA pasted CSV costs tokens for every value\nglimpse() + 5 rows: a few hundred tokens\nA full dataset can fill most of the window, leaving less room for your instructions"
+    "text": "Tokens: how the model reads text\nModels don’t read words or characters. They read tokens.\n\nWhichparkhadthemostsquirrelsightingsin2020?\n\n\nIllustrative split. The exact tokens depend on each model’s tokenizer.\n\n\n\nRules of thumb (English text)\n\nOne token is roughly ¾ of a word\nCommon words are one token; rare words, numbers and code split into several\nTools limit and bill usage in tokens\n\n\nWhy it matters for data work\n\nA pasted CSV costs tokens for every value\nglimpse() + 5 rows: a few hundred tokens\nA full dataset can fill most of the window, leaving less room for your instructions"
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#the-context-window",
@@ -137,7 +137,7 @@
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#does-being-mean-help",
     "title": "AI for EDS",
     "section": "Does being mean help?",
-    "text": "Does being mean help?\nDobariya & Kumar (2025) gave ChatGPT-4o 50 MC questions, each prefixed 5 ways (10 runs each, differences statistically significant):\n\n\n\n\n\nTone\nAccuracy\n\n\n\n\nVery polite\n80.8%\n\n\nPolite\n81.4%\n\n\nNeutral\n82.2%\n\n\nRude\n82.8%\n\n\nVery rude\n84.8%\n\n\n\n\n\nExample prefixes add to the questions: :\n\nVery polite: “Can you kindly consider the following problem…”\nNeutral: (no prefix — just the question)\nVery rude: “You poor creature, do you even know how to solve this?”\n\nSo is rudeness helping, or does adding any filler hurt?\nThe authors flag that prompt length may matter more than tone.\n\n\n\n\n\n\nTip\n\n\nBe direct and skip the filler."
+    "text": "Does being mean help?\nDobariya & Kumar (2025) gave ChatGPT-4o 50 MC questions, each prefixed 5 ways (10 runs each, differences statistically significant):\n\n\n\n\n\nTone\nAccuracy\n\n\n\n\nVery polite\n80.8%\n\n\nPolite\n81.4%\n\n\nNeutral\n82.2%\n\n\nRude\n82.8%\n\n\nVery rude\n84.8%\n\n\n\n\n. . .\nExample prefixes add to the questions: :\n\nVery polite: “Can you kindly consider the following problem…”\nNeutral: (no prefix — just the question)\nVery rude: “You poor creature, do you even know how to solve this?”\n\nSo is rudeness helping, or does adding any filler hurt?\nThe authors flag that prompt length may matter more than tone.\n\n\n\n\n\n\nTip\n\n\nBe direct and skip the filler."
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#section-3",
@@ -179,7 +179,7 @@
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#how-role-framing-shaped-the-result",
     "title": "AI for EDS",
     "section": "How role framing shaped the result",
-    "text": "How role framing shaped the result\n\n\nWhat happened\n\nSame prompt, same data → three different datasets\nEach role’s choices were reasonable for that role\nThe worst losses were silent: values became NA with no warning\n\n\nHow to prevent it\n\nState your goal and what must be preserved\nAsk for a list of every value that was changed or dropped\nCompare row counts and NA counts before and after\nKeep original columns; add derived ones beside them"
+    "text": "How role framing shaped the result\n\n\nWhat happened\n\nSame prompt structure, same data → three different roles\nEach role’s choices were reasonable for that role\nThe worst losses were silent: values became NA with no warning\n\n\nHow to prevent it\n\nState your goal and what must be preserved\nAsk for a list of every value that was changed or dropped\nCompare row counts and NA counts before and after\nKeep original columns; add derived ones beside them"
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#activity-prompt-makeover",

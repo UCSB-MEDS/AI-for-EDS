@@ -131,7 +131,7 @@ Non-determinism matters for the activity: pairs will get different outputs from 
 Models don't read words or characters. They read **tokens**.
 
 ::: {.token-demo}
-[The]{.tok}[ squ]{.tok}[irrel]{.tok}[ ran]{.tok}[ up]{.tok}[ the]{.tok}[ oak]{.tok}[ tree]{.tok}[.]{.tok}
+[Which]{.tok}[ park]{.tok}[ had]{.tok}[ the]{.tok}[ most]{.tok}[ squ]{.tok}[irrel]{.tok}[ sightings]{.tok}[ in]{.tok}[ 202]{.tok}[0]{.tok}[?]{.tok}
 :::
 
 ::: {.token-caption}
@@ -610,7 +610,7 @@ Advance three times: data manager, then data science student, then environmental
 ::: {.column width="50%"}
 **What happened**
 
-- Same prompt, same data → **three different datasets**
+- Same prompt structure, same data → **three different roles**
 - Each role's choices were reasonable *for that role*
 - The worst losses were **silent**: values became NA with no warning
 :::

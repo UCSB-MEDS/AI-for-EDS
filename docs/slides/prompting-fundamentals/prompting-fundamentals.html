@@ -7,10 +7,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+  <meta name="generator" content="quarto-1.6.39">
 
   <meta name="author" content="Annie Adams, Kat Le">
   <title>AI for EDS – AI for Environmental Data Science: Prompting Fundamentals</title>
@@ -20,16 +20,10 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -38,9 +32,8 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -51,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -104,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-623aaf5e0c01bd0755fd717763635907.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-383a437c57ea440284b3ca02f5b01d26.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -320,7 +313,7 @@
 <h2>Tokens: how the model reads text</h2>
 <p>Models don’t read words or characters. They read <strong>tokens</strong>.</p>
 <div class="token-demo">
-<p><span class="tok">The</span><span class="tok">squ</span><span class="tok">irrel</span><span class="tok">ran</span><span class="tok">up</span><span class="tok">the</span><span class="tok">oak</span><span class="tok">tree</span><span class="tok">.</span></p>
+<p><span class="tok">Which</span><span class="tok">park</span><span class="tok">had</span><span class="tok">the</span><span class="tok">most</span><span class="tok">squ</span><span class="tok">irrel</span><span class="tok">sightings</span><span class="tok">in</span><span class="tok">202</span><span class="tok">0</span><span class="tok">?</span></p>
 </div>
 <div class="token-caption">
 <p>Illustrative split. The exact tokens depend on each model’s tokenizer.</p>
@@ -643,9 +636,9 @@
 <h2>Show the model your data (safely)</h2>
 <p>The model can’t see your data frame. Give it the <strong>structure</strong>, not the whole dataset.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(squirrels)          <span class="co"># column names, types, first values</span></span>
-<span id="cb1-2"><a aria-label="2"></a><span class="fu">head</span>(squirrels, <span class="dv">5</span>) <span class="sc">|&gt;</span> knitr<span class="sc">::</span><span class="fu">kable</span>() <span class="co"># a few example rows</span></span>
-<span id="cb1-3"><a aria-label="3"></a><span class="fu">dput</span>(<span class="fu">head</span>(squirrels, <span class="dv">5</span>))           <span class="co"># reproducible snippet it can run</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(squirrels)          <span class="co"># column names, types, first values</span></span>
+<span id="cb1-2"><a></a><span class="fu">head</span>(squirrels, <span class="dv">5</span>) <span class="sc">|&gt;</span> knitr<span class="sc">::</span><span class="fu">kable</span>() <span class="co"># a few example rows</span></span>
+<span id="cb1-3"><a></a><span class="fu">dput</span>(<span class="fu">head</span>(squirrels, <span class="dv">5</span>))           <span class="co"># reproducible snippet it can run</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -700,15 +693,15 @@
 <h2>Verify before you trust</h2>
 <p>AI-written cleaning code can <strong>run perfectly and still lose data</strong>. Check it.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>n_before <span class="ot">&lt;-</span> <span class="fu">nrow</span>(squirrels)</span>
-<span id="cb2-2"><a aria-label="2"></a>clean    <span class="ot">&lt;-</span> <span class="fu">clean_squirrels</span>(squirrels)   <span class="co"># AI-written function</span></span>
-<span id="cb2-3"><a aria-label="3"></a></span>
-<span id="cb2-4"><a aria-label="4"></a><span class="fu">stopifnot</span>(<span class="fu">nrow</span>(clean) <span class="sc">==</span> n_before)       <span class="co"># no rows silently dropped</span></span>
-<span id="cb2-5"><a aria-label="5"></a></span>
-<span id="cb2-6"><a aria-label="6"></a><span class="co"># how many new NAs did cleaning create in a column?</span></span>
-<span id="cb2-7"><a aria-label="7"></a>na_added <span class="ot">&lt;-</span> <span class="cf">function</span>(before, after, col) {</span>
-<span id="cb2-8"><a aria-label="8"></a>  <span class="fu">sum</span>(<span class="fu">is.na</span>(after[[col]])) <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(before[[col]]))</span>
-<span id="cb2-9"><a aria-label="9"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>n_before <span class="ot">&lt;-</span> <span class="fu">nrow</span>(squirrels)</span>
+<span id="cb2-2"><a></a>clean    <span class="ot">&lt;-</span> <span class="fu">clean_squirrels</span>(squirrels)   <span class="co"># AI-written function</span></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="fu">stopifnot</span>(<span class="fu">nrow</span>(clean) <span class="sc">==</span> n_before)       <span class="co"># no rows silently dropped</span></span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a><span class="co"># how many new NAs did cleaning create in a column?</span></span>
+<span id="cb2-7"><a></a>na_added <span class="ot">&lt;-</span> <span class="cf">function</span>(before, after, col) {</span>
+<span id="cb2-8"><a></a>  <span class="fu">sum</span>(<span class="fu">is.na</span>(after[[col]])) <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(before[[col]]))</span>
+<span id="cb2-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Prompts that help</strong></p>
 <ul>
@@ -753,7 +746,7 @@
 </tbody>
 </table>
 </div><div class="column" style="width:70%;">
-<div class="fragment">
+<p>. . .</p>
 <p><strong>Example prefixes add to the questions: :</strong></p>
 <ul>
 <li>Very polite: <em>“Can you kindly consider the following problem…”</em></li>
@@ -772,7 +765,6 @@
 </div>
 <div class="callout-content">
 <p>Be direct and skip the filler.</p>
-</div>
 </div>
 </div>
 </div>
@@ -923,7 +915,7 @@
 <div class="column" style="width:50%;">
 <p><strong>What happened</strong></p>
 <ul>
-<li>Same prompt, same data → <strong>three different datasets</strong></li>
+<li>Same prompt structure, same data → <strong>three different roles</strong></li>
 <li>Each role’s choices were reasonable <em>for that role</em></li>
 <li>The worst losses were <strong>silent</strong>: values became NA with no warning</li>
 </ul>
@@ -1037,8 +1029,8 @@
 <li>In <code>activity-starter.R</code>, run the check on your Round 1 and Round 3 outputs, using the cleaned data frame:</li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">check_cleaning</span>(squirrels, clean_r1, height_col)</span>
-<span id="cb3-2"><a aria-label="2"></a><span class="fu">check_cleaning</span>(squirrels, clean_r3, height_col)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">check_cleaning</span>(squirrels, clean_r1, height_col)</span>
+<span id="cb3-2"><a></a><span class="fu">check_cleaning</span>(squirrels, clean_r3, height_col)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>Compare the two outputs. Which round created more NAs?</li>
@@ -1053,17 +1045,17 @@
 <h2>Verify: the check function</h2>
 <p>In <code>activity-starter.R</code>, and worth keeping for any AI-written cleaning code:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>check_cleaning <span class="ot">&lt;-</span> <span class="cf">function</span>(before, after, col) {</span>
-<span id="cb4-2"><a aria-label="2"></a>  <span class="cf">if</span> (<span class="sc">!</span>col <span class="sc">%in%</span> <span class="fu">names</span>(after)) <span class="fu">stop</span>(<span class="st">"Column '"</span>, col, <span class="st">"' was renamed or dropped"</span>)</span>
-<span id="cb4-3"><a aria-label="3"></a>  tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
-<span id="cb4-4"><a aria-label="4"></a>    <span class="at">rows_before   =</span> <span class="fu">nrow</span>(before),</span>
-<span id="cb4-5"><a aria-label="5"></a>    <span class="at">rows_after    =</span> <span class="fu">nrow</span>(after),</span>
-<span id="cb4-6"><a aria-label="6"></a>    <span class="at">na_before     =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(before[[col]])),</span>
-<span id="cb4-7"><a aria-label="7"></a>    <span class="at">na_after      =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(after[[col]])),</span>
-<span id="cb4-8"><a aria-label="8"></a>    <span class="at">values_before =</span> dplyr<span class="sc">::</span><span class="fu">n_distinct</span>(before[[col]]),</span>
-<span id="cb4-9"><a aria-label="9"></a>    <span class="at">values_after  =</span> dplyr<span class="sc">::</span><span class="fu">n_distinct</span>(after[[col]])</span>
-<span id="cb4-10"><a aria-label="10"></a>  )</span>
-<span id="cb4-11"><a aria-label="11"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>check_cleaning <span class="ot">&lt;-</span> <span class="cf">function</span>(before, after, col) {</span>
+<span id="cb4-2"><a></a>  <span class="cf">if</span> (<span class="sc">!</span>col <span class="sc">%in%</span> <span class="fu">names</span>(after)) <span class="fu">stop</span>(<span class="st">"Column '"</span>, col, <span class="st">"' was renamed or dropped"</span>)</span>
+<span id="cb4-3"><a></a>  tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb4-4"><a></a>    <span class="at">rows_before   =</span> <span class="fu">nrow</span>(before),</span>
+<span id="cb4-5"><a></a>    <span class="at">rows_after    =</span> <span class="fu">nrow</span>(after),</span>
+<span id="cb4-6"><a></a>    <span class="at">na_before     =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(before[[col]])),</span>
+<span id="cb4-7"><a></a>    <span class="at">na_after      =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(after[[col]])),</span>
+<span id="cb4-8"><a></a>    <span class="at">values_before =</span> dplyr<span class="sc">::</span><span class="fu">n_distinct</span>(before[[col]]),</span>
+<span id="cb4-9"><a></a>    <span class="at">values_after  =</span> dplyr<span class="sc">::</span><span class="fu">n_distinct</span>(after[[col]])</span>
+<span id="cb4-10"><a></a>  )</span>
+<span id="cb4-11"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1560,7 +1552,7 @@ Rounds 2–4 of the activity, written down once. It's in this repo at `.claude/s
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1625,173 +1617,190 @@ Rounds 2–4 of the activity, written down once. It's in this repo at `.claude/s
     </script>
 
     <script id="quarto-html-after-body" type="application/javascript">
-      window.document.addEventListener("DOMContentLoaded", function (event) {
-        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-        tabsets.forEach(function(tabset) {
-          const tabby = new Tabby('#' + tabset.id);
-        });
-        const isCodeAnnotation = (el) => {
-          for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
-              return true;
-            }
-          }
-          return false;
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
         }
-        const onCopySuccess = function(e) {
-          // button target
-          const button = e.trigger;
-          // don't keep focus
-          button.blur();
-          // flash "checked"
-          button.classList.add('code-copy-button-checked');
-          var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copied!");
-          let tooltip;
-          if (window.bootstrap) {
-            button.setAttribute("data-bs-toggle", "tooltip");
-            button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
-                customClass: "code-copy-button-tooltip",
-                offset: [0, -8]});
-            tooltip.show();    
-          }
-          setTimeout(function() {
-            if (tooltip) {
-              tooltip.hide();
-              button.removeAttribute("data-bs-title");
-              button.removeAttribute("data-bs-toggle");
-              button.removeAttribute("data-bs-placement");
-            }
-            button.setAttribute("title", currentTitle);
-            button.classList.remove('code-copy-button-checked');
-          }, 1000);
-          // clear code selection
-          e.clearSelection();
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
         }
-        const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
           for (const childEl of codeEl.children) {
             if (isCodeAnnotation(childEl)) {
               childEl.remove();
             }
           }
           return codeEl.innerText;
-        }
-        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-          text: getTextToCopy
-        });
-        clipboard.on('success', onCopySuccess);
-        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-            text: getTextToCopy,
-            container: window.document.getElementById('quarto-embedded-source-code-modal')
-          });
-          clipboardModal.on('success', onCopySuccess);
-        }
-          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
-          var isInternal = (href) => {
-              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-          }
-          // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-          for (var i=0; i<links.length; i++) {
-            const link = links[i];
-            if (!isInternal(link.href)) {
-              // undo the damage that might have been done by quarto-nav.js in the case of
-              // links that we want to consider external
-              if (link.dataset.originalHref !== undefined) {
-                link.href = link.dataset.originalHref;
-              }
-            }
-          }
-        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-          const config = {
-            allowHTML: true,
-            maxWidth: 500,
-            delay: 100,
-            arrow: false,
-            appendTo: function(el) {
-                return el.closest('section.slide') || el.parentElement;
-            },
-            interactive: true,
-            interactiveBorder: 10,
-            theme: 'light-border',
-            placement: 'bottom-start',
-          };
-          if (contentFn) {
-            config.content = contentFn;
-          }
-          if (onTriggerFn) {
-            config.onTrigger = onTriggerFn;
-          }
-          if (onUntriggerFn) {
-            config.onUntrigger = onUntriggerFn;
-          }
-            config['offset'] = [0,0];
-            config['maxWidth'] = 700;
-          window.tippy(el, config); 
-        }
-        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-        for (var i=0; i<noterefs.length; i++) {
-          const ref = noterefs[i];
-          tippyHover(ref, function() {
-            // use id or data attribute instead here
-            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-            try { href = new URL(href).hash; } catch {}
-            const id = href.replace(/^#\/?/, "");
-            const note = window.document.getElementById(id);
-            if (note) {
-              return note.innerHTML;
-            } else {
-              return "";
-            }
-          });
-        }
-        const findCites = (el) => {
-          const parentEl = el.parentElement;
-          if (parentEl) {
-            const cites = parentEl.dataset.cites;
-            if (cites) {
-              return {
-                el,
-                cites: cites.split(' ')
-              };
-            } else {
-              return findCites(el.parentElement)
-            }
-          } else {
-            return undefined;
-          }
-        };
-        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-        for (var i=0; i<bibliorefs.length; i++) {
-          const ref = bibliorefs[i];
-          const citeInfo = findCites(ref);
-          if (citeInfo) {
-            tippyHover(citeInfo.el, function() {
-              var popup = window.document.createElement('div');
-              citeInfo.cites.forEach(function(cite) {
-                var citeDiv = window.document.createElement('div');
-                citeDiv.classList.add('hanging-indent');
-                citeDiv.classList.add('csl-entry');
-                var biblioDiv = window.document.getElementById('ref-' + cite);
-                if (biblioDiv) {
-                  citeDiv.innerHTML = biblioDiv.innerHTML;
-                }
-                popup.appendChild(citeDiv);
-              });
-              return popup.innerHTML;
-            });
-          }
-        }
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      </script>
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
     
 
 </body></html>

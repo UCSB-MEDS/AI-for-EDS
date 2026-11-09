@@ -864,6 +864,7 @@ It runs the loop. **You stay the reviewer.**
 ::: {.callout-tip}
 An agent can act on your files, so the fundamentals matter **more**, not less.
 :::
+<!--
 
 ## Same fundamentals, new home {.smaller .map}
 
@@ -875,7 +876,7 @@ An agent can act on your files, so the fundamentals matter **more**, not less.
 | **Surface assumptions** | "List your assumptions" | Built into the skill: *before writing code…* |
 | **Verify** | You run the check | It runs the check script; you review the diff |
 
-<!--
+
 
 ## What is a skill? {.smaller}
 

@@ -231,13 +231,6 @@
     "text": "Chat assistant vs. coding agent\n\n\n\nChat assistant\n\nYou write a prompt\nIt suggests code\nYou copy, run and check it\nYou paste back errors\n\nYou run the loop.\n\n\n\nCoding agent (e.g. Claude Code)\n\nYou describe the goal\nIt reads your files and data\nIt writes code, runs it, sees errors, fixes them\nYou review and approve changes\n\nIt runs the loop. You stay the reviewer.\n\n\n\n\n\n\n\n\n\nTip\n\n\nAn agent can act on your files, so the fundamentals matter more, not less."
   },
   {
-    "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#same-fundamentals-new-home",
-    "href": "slides/prompting-fundamentals/prompting-fundamentals.html#same-fundamentals-new-home",
-    "title": "AI for EDS",
-    "section": "Same fundamentals, new home",
-    "text": "Same fundamentals, new home\n\n\n\n\n\n\n\n\nFundamental\nIn a chat\nIn Claude Code\n\n\n\n\nContext\nPaste glimpse() every time\nIt reads your repo; project notes live in CLAUDE.md\n\n\nBe specific\nRetype constraints\nWrite rules once in a skill\n\n\nSmall steps\n“Do step 1 only”\nAsk for a plan first, approve it, then let it work\n\n\nSurface assumptions\n“List your assumptions”\nBuilt into the skill: before writing code…\n\n\nVerify\nYou run the check\nIt runs the check script; you review the diff"
-  },
-  {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#references",
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#references",
     "title": "AI for EDS",

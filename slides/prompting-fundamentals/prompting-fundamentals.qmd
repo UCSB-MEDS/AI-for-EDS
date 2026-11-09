@@ -8,6 +8,7 @@ format:
     incremental: false
     code-overflow: wrap
     footer: "AI for EDS · Prompting Fundamentals"
+    chalkboard: true
 execute:
   echo: true
   eval: false

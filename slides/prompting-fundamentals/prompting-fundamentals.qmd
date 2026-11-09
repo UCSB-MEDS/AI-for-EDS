@@ -87,19 +87,9 @@ How the model reads your prompt
 LLM vocabulary, and what an AI assistant can and can't see
 :::
 
-## LLM vocabulary {.smaller}
+## Terms to know {.smaller}
 
-::: {.vocab-grid}
-::: {.vc}
-**LLM**
-
-Large language model: predicts the next piece of text from patterns in its training data
-:::
-::: {.vc}
-**Prompt**
-
-Everything you send the model: your question, pasted data, instructions
-:::
+::: {.vocab-grid .cols-3}
 ::: {.vc}
 **Token**
 
@@ -109,6 +99,11 @@ The unit a model reads and writes; a word or part of a word
 **Context window**
 
 The maximum number of tokens the model can work with at once
+:::
+::: {.vc}
+**Prompt**
+
+Everything you send the model: your question, pasted data, instructions
 :::
 ::: {.vc}
 **System prompt**
@@ -124,11 +119,6 @@ Confident output that is false: a made-up function, column or citation
 **Non-determinism**
 
 The same prompt can give different answers each time you run it
-:::
-::: {.vc}
-**Agent**
-
-A model that can use tools (read files, run code) in a loop toward a goal
 :::
 :::
 
@@ -486,7 +476,11 @@ Same data, three roles
 The 2020 NYC Park Squirrel Census
 :::
 
-## Meet the data: NYC park squirrels {.smaller}
+::: {.footer-note}
+Adapted from A. Dillman, *Yes, And… AI in Your IDE*, posit::conf(2026)
+:::
+
+## Case Study: NYC park squirrels dataset {.smaller}
 
 ::: {.squirrel-stats}
 ::: {.stat}
@@ -514,20 +508,46 @@ Source: The Squirrel Census / NYC Open Data, *2020 Park Squirrel Census*
 
 ## Same data, three roles {.roles}
 
-**2020 Park Squirrel Census** (433 sightings, 24 parks) · "I am [role]. Clean this dataset for me."
+Each AI session got the same data and the same prompt, changing only the role:
 
-Different roles yielded different methods to to clean the data. 
+> "I am **[role]**. Clean this dataset for me."
+
+::: {.role-cards}
+::: {.rg-role .dm}
+DM
+
+[Data manager]{.role-name}
+:::
+::: {.rg-role .ds}
+DS
+
+[Data science student]{.role-name}
+:::
+::: {.rg-role .env}
+ENV
+
+[Environmental researcher]{.role-name}
+:::
+:::
+
+::: {.footer-note}
+Adapted from A. Dillman, *Yes, And… AI in Your IDE*, posit::conf(2026)
+:::
+
+## Four ways the data changed {.roles}
+
+Different roles yielded different methods to clean the data. 
 
 The four methods used were: 
 
 ::: {.columns}
 ::: {.column width="50%"}
-- **Preserved:** script left the data intact without removing anything
-- **Transformed:**  values were simplified or normalized, but original meaning kept
+- [**Preserved:**]{.term .preserved} script left the data intact without removing anything
+- [**Transformed:**]{.term .transformed}  values were simplified or normalized, but original meaning kept
 :::
 ::: {.column width="50%"}
-- **Interpreted:**  data changed shape (e.g. one column split into many), steering it toward a specific analysis
-- **Discarded:** values present in the raw data were silently dropped
+- [**Interpreted:**]{.term .interpreted}  data changed shape (e.g. one column split into many), steering it toward a specific analysis
+- [**Discarded:**]{.term .discarded} values present in the raw data were silently dropped
 :::
 :::
 

@@ -89,6 +89,8 @@ $code-color: $magenta;
   display: grid; place-items: center; min-height: 2.5em;
   text-align: center; line-height: 1.2; font-weight: 600;
 }
+.reveal .term { color: $white; border-radius: 0.3em; padding: 0 0.3em; }
+.reveal .term strong { color: $white; }
 .reveal .preserved   { background: $green; color: $dark-blue; }
 .reveal .transformed { background: $teal; }
 .reveal .interpreted { background: $dark-blue; }
@@ -100,6 +102,12 @@ $code-color: $magenta;
 .reveal .rg-role.dm  { background: $baby-blue; }
 .reveal .rg-role.ds  { background: $off-white; border: 2px solid $baby-blue; }
 .reveal .rg-role.env { background: #e4eed8; }
+.reveal .role-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8em; margin-top: 1em;
+}
+.reveal .role-cards .rg-role { padding: 0.6em 0.4em; }
+.reveal .role-cards .rg-role p { margin: 0; }
+.reveal .role-cards .role-name { font-family: $font-family-sans-serif; font-size: 0.6em; }
 .reveal .footer-note { font-size: 0.5em; color: $gray; margin-top: 0.4em; }
 
 /* MEDS title slide */
@@ -176,6 +184,7 @@ $code-color: $magenta;
 }
 .reveal .meds-section .mt-rule { height: 10px; background: $teal; margin: 0.6em 0 0.6em; }
 .reveal .meds-section .ms-sub { color: $baby-blue; font-size: 1em; }
+.reveal .meds-section .footer-note { color: $baby-blue; margin-top: 1.2em; }
 
 /* prompt anatomy */
 .reveal .prompt-anatomy {
@@ -269,6 +278,7 @@ $code-color: $magenta;
 .reveal .vocab-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5em; margin-top: 0.3em;
 }
+.reveal .vocab-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .reveal .vocab-grid .vc {
   background: $off-white; border-left: 5px solid $teal; border-radius: 0.3em;
   padding: 0.4em 0.6em; font-size: 1.05em; line-height: 1.3;

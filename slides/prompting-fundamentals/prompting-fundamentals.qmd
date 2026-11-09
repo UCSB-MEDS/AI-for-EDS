@@ -56,7 +56,7 @@ Annie Adams, Kat Le
 [Four rounds: weak prompt → strong prompt → verified code]{.agenda-sub}
 
 **Part 4 · From prompts to agents**\
-[Agentic coding and `SKILL.md` in Claude Code]{.agenda-sub}
+[Agentic coding in Claude Code]{.agenda-sub}
 :::
 
 ::: {.column width="45%"}
@@ -642,7 +642,7 @@ Objective 3: check the code against the data
 ::: {.callout-note icon="false"}
 ## {{< fa screwdriver-wrench >}} Setup
 
-Download and unzip this [folder]() to get started on the activity. Open the folder in Positron, and open *claude.ai* in your browser or the Claude desktop app.
+Download and unzip the **[activity materials](https://downgit.github.io/#/home?url=https://github.com/UCSB-MEDS/AI-prompting-fundamentals-activity)to get started on the activity. Open the folder in Positron, and open *claude.ai* in your browser or the Claude desktop app.
 :::
 
 
@@ -655,9 +655,8 @@ Download and unzip this [folder]() to get started on the activity. Open the fold
 
 Do this before Round 1:
 
-1. **Download the2020 Park Squirrel Census: Squirrel Data** from [thesquirrelcensus.com/data](https://www.thesquirrelcensus.com/data)
-2. **Download `activity-starter.R`** from the workshop page at [ucsb-meds.github.io/AI-for-EDS](https://ucsb-meds.github.io/AI-for-EDS)
-3. **Open `activity-starter.R`** in RStudio or Positron — it loads the data and defines `check_cleaning()`
+1. Download the **[activity materials](https://downgit.github.io/#/home?url=https://github.com/UCSB-MEDS/AI-prompting-fundamentals-activity)**
+3. **Open `activity-starter.qmd`** in RStudio or Positron. It loads the data and defines `check_cleaning()`
 4. Update the file path at the top to point to your downloaded CSV, then run the setup chunk
 5. **Open [claude.ai](https://claude.ai) in your browser** (or the Claude desktop app). 
 

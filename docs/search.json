@@ -137,7 +137,7 @@
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#does-being-mean-help",
     "title": "AI for EDS",
     "section": "Does being mean help?",
-    "text": "Does being mean help?\n\n\nDobariya & Kumar (2025), Mind Your Tone\n\n50 multiple-choice questions (math, science, history)\nEach rewritten in 5 tones → 250 prompts\nModel: ChatGPT-4o\n\n\n\n\nTone\nAccuracy\n\n\n\n\nVery polite\n~80.8%\n\n\nVery rude\n~84.8%\n\n\n\nRude prompts scored ~4 points higher.\n\nBefore you start insulting Copilot…\n\nOne model, one version, 50 questions\nMultiple choice ≠ writing your analysis code\nEarlier work (Yin et al., 2024) found impolite prompts often hurt performance on older models\nOpen question: is it rudeness, or that rude prompts are shorter and more direct?\n\n\n\n\nGood discussion prompt: how would you design a study to separate “rude” from “concise”? This is a reproducibility lesson too: a single-model, single-run result is a hypothesis, not a rule."
+    "text": "Does being mean help?\nDobariya & Kumar (2025) gave ChatGPT-4o 50 MC questions, each prefixed 5 ways (10 runs each, differences statistically significant):\n\n\n\n\n\nTone\nAccuracy\n\n\n\n\nVery polite\n80.8%\n\n\nPolite\n81.4%\n\n\nNeutral\n82.2%\n\n\nRude\n82.8%\n\n\nVery rude\n84.8%\n\n\n\n\n\nExample prefixes add to the questions: :\n\nVery polite: “Can you kindly consider the following problem…”\nNeutral: (no prefix — just the question)\nVery rude: “You poor creature, do you even know how to solve this?”\n\nSo is rudeness helping, or does adding any filler hurt?\nThe authors flag that prompt length may matter more than tone.\n\n\n\n\n\n\nTip\n\n\nBe direct and skip the filler."
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#section-3",
@@ -179,7 +179,7 @@
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#activity-prompt-makeover",
     "title": "AI for EDS",
     "section": "Activity: Prompt makeover",
-    "text": "Activity: Prompt makeover\nGoal: turn a weak prompt into a strong one, and measure the difference.\n\n\nRound 1 · 3 min\nWeak prompt\nBaseline: see what you get\n\n\nRound 2 · 5 min\nAdd context + constraints\nObjective 1: write a complete prompt\n\n\nRound 3 · 5 min\nAssumptions first\nObjective 2: make the model show its assumptions\n\n\nRound 4 · 5 min\nVerify\nObjective 3: check the code against the data\n\n\n\n\n\n Setup\n\n\nDownload and unzip the **activity materialsto get started on the activity. Open the folder in Positron, and open claude.ai in your browser or the Claude desktop app."
+    "text": "Activity: Prompt makeover\nGoal: turn a weak prompt into a strong one, and see how the results change.\n\n\nRound 1 · 3 min\nWeak prompt\nBaseline: see what you get\n\n\nRound 2 · 5 min\nAdd context + constraints\nWrite a complete prompt\n\n\nRound 3 · 5 min\nAssumptions first\nMake the model show its assumptions\n\n\nRound 4 · 5 min\nVerify\nCheck the code against the data\n\n\n\n\n\n Setup\n\n\nDownload and unzip the activity materials to get started on the activity. Open the folder in Positron, and open claude.ai in your browser or the Claude desktop app."
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#the-prompts",
@@ -200,14 +200,14 @@
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#scorecard-debrief",
     "title": "AI for EDS",
     "section": "Scorecard + debrief",
-    "text": "Scorecard + debrief\n\n\n\n\nRound 1\nRound 2\nRound 3\n\n\n\n\nRows kept?\n\n\n\n\n\nOriginal column kept?\n\n\n\n\n\nNew NAs created\n\n\n\n\n\nModel told you what it changed?\n\n\n\n\n\nCode you’d actually use?\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebrief (5 min)\n\n\n\nWhich round lost the least data, and which fundamental made the difference?\nIn Round 4, did the model’s own answer match the check?\nWhat will you add to your prompts from now on?"
+    "text": "Scorecard + debrief\n\n\n\n\nRound 1\nRound 2\nRound 3\n\n\n\n\nRows kept?\n\n\n\n\n\nOriginal column kept?\n\n\n\n\n\nNew NAs created\n\n\n\n\n\nModel told you what it changed?\n\n\n\n\n\nCode you’d actually use?\n\n\n\n\n\n\n\n\n\n\n\n\n\nDebrief (5 min)\n\n\n\nWhich round lost the least data?\nIn Round 4, did the model’s own answer match the check?\nWhat will you add to your prompts from now on?"
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#section-4",
     "href": "slides/prompting-fundamentals/prompting-fundamentals.html#section-4",
     "title": "AI for EDS",
     "section": "",
-    "text": "Part 4\n\n\nFrom prompts to agents\n\n\n\n\n\nWrite it down once: agentic coding and skills"
+    "text": "Part 4\n\n\nFrom prompts to agents"
   },
   {
     "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#you-just-did-the-same-work-four-times",
@@ -488,5 +488,12 @@
     "title": "AI for EDS",
     "section": "References",
     "text": "References\n\nDobariya, O., & Kumar, A. (2025). Mind Your Tone: Investigating How Prompt Politeness Affects LLM Accuracy. arXiv:2510.04950. https://arxiv.org/abs/2510.04950\nYin, Z., et al. (2024). Should We Respect LLMs? A Cross-Lingual Study on the Influence of Prompt Politeness on LLM Performance. arXiv:2402.14531. https://arxiv.org/abs/2402.14531\nThe Squirrel Census & NYC Open Data. 2020 Park Squirrel Census (Squirrel Data and Park Data). https://data.cityofnewyork.us\nWNYC (2022). The NYC Squirrel Census is back with new results. https://wnyc.org/story/nyc-squirrel-census-back-new-results-and-toll-free-number/\nSharma, M., et al. (2023). Towards Understanding Sycophancy in Language Models. arXiv:2310.13548. https://arxiv.org/abs/2310.13548\nAnthropic. Extend Claude with skills. Claude Code documentation. https://code.claude.com/docs/en/skills\nDillman, A. Being an Informed and Savvy AI User session, posit::conf(2026). https://posit.co/blog/posit-conf-2026-agenda-breakdown"
+  },
+  {
+    "objectID": "slides/prompting-fundamentals/prompting-fundamentals.html#how-role-framing-shaped-the-result",
+    "href": "slides/prompting-fundamentals/prompting-fundamentals.html#how-role-framing-shaped-the-result",
+    "title": "AI for EDS",
+    "section": "How role framing shaped the result",
+    "text": "How role framing shaped the result\n\n\nWhat happened\n\nSame prompt, same data → three different datasets\nEach role’s choices were reasonable for that role\nThe worst losses were silent: values became NA with no warning\n\n\nHow to prevent it\n\nState your goal and what must be preserved\nAsk for a list of every value that was changed or dropped\nCompare row counts and NA counts before and after\nKeep original columns; add derived ones beside them"
   }
 ]

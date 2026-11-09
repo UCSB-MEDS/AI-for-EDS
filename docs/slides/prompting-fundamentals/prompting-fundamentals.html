@@ -725,14 +725,9 @@
 </section>
 <section id="does-being-mean-help" class="slide level2 smaller">
 <h2>Does being <em>mean</em> help?</h2>
+<p><strong>Dobariya &amp; Kumar (2025)</strong> gave ChatGPT-4o 50 MC questions, each prefixed 5 ways (10 runs each, differences statistically significant):</p>
 <div class="columns">
-<div class="column" style="width:55%;">
-<p><strong>Dobariya &amp; Kumar (2025), <em>Mind Your Tone</em></strong></p>
-<ul>
-<li>50 multiple-choice questions (math, science, history)</li>
-<li>Each rewritten in 5 tones → <strong>250 prompts</strong></li>
-<li>Model: ChatGPT-4o</li>
-</ul>
+<div class="column" style="width:30%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -743,39 +738,51 @@
 <tbody>
 <tr class="odd">
 <td>Very polite</td>
-<td>~80.8%</td>
+<td>80.8%</td>
 </tr>
 <tr class="even">
+<td>Polite</td>
+<td>81.4%</td>
+</tr>
+<tr class="odd">
+<td>Neutral</td>
+<td>82.2%</td>
+</tr>
+<tr class="even">
+<td>Rude</td>
+<td>82.8%</td>
+</tr>
+<tr class="odd">
 <td>Very rude</td>
-<td>~84.8%</td>
+<td>84.8%</td>
 </tr>
 </tbody>
 </table>
-<p>Rude prompts scored ~4 points higher.</p>
-</div><div class="column" style="width:45%;">
-<p><strong>Before you start insulting Copilot…</strong></p>
-<ul>
-<li>One model, one version, 50 questions</li>
-<li>Multiple choice ≠ writing your analysis code</li>
-<li>Earlier work (Yin et al., 2024) found <strong>impolite prompts often hurt</strong> performance on older models</li>
-<li>Open question: is it rudeness, or that rude prompts are <strong>shorter and more direct</strong>?</li>
-</ul>
-</div></div>
+</div><div class="column" style="width:70%;">
 <div class="fragment">
-<aside class="notes">
-<p>Good discussion prompt: how would you design a study to separate “rude” from “concise”? This is a reproducibility lesson too: a single-model, single-run result is a hypothesis, not a rule.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><strong>Example prefixes add to the questions: :</strong></p>
+<ul>
+<li>Very polite: <em>“Can you kindly consider the following problem…”</em></li>
+<li>Neutral: <em>(no prefix — just the question)</em></li>
+<li>Very rude: <em>“You poor creature, do you even know how to solve this?”</em></li>
+</ul>
+<p>So is <em>rudeness</em> helping, or does <strong>adding any filler hurt</strong>?</p>
+<p>The authors flag that prompt length may matter more than tone.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Be direct and skip the filler.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="section-3" class="slide level2 meds-section" data-background-color="#003660">
 <h2></h2>
@@ -890,8 +897,8 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="what-the-squirrels-taught-us" class="slide level2 smaller">
-<h2>What the squirrels taught us</h2>
+<section id="how-role-framing-shaped-the-result" class="slide level2 smaller">
+<h2>How role framing shaped the result</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>What happened</strong></p>
@@ -912,7 +919,7 @@
 </section>
 <section id="activity-prompt-makeover" class="slide level2">
 <h2>Activity: Prompt makeover</h2>
-<p><strong>Goal:</strong> turn a weak prompt into a strong one, and <em>measure</em> the difference.</p>
+<p><strong>Goal:</strong> turn a weak prompt into a strong one, and see how the results change.</p>
 <div class="round-grid">
 <div class="round">
 <p><span class="round-tag">Round 1 · 3 min</span></p>
@@ -922,17 +929,17 @@
 <div class="round">
 <p><span class="round-tag r2">Round 2 · 5 min</span></p>
 <p><strong>Add context + constraints</strong></p>
-<p>Objective 1: write a complete prompt</p>
+<p>Write a complete prompt</p>
 </div>
 <div class="round">
 <p><span class="round-tag r3">Round 3 · 5 min</span></p>
 <p><strong>Assumptions first</strong></p>
-<p>Objective 2: make the model show its assumptions</p>
+<p>Make the model show its assumptions</p>
 </div>
 <div class="round">
 <p><span class="round-tag r4">Round 4 · 5 min</span></p>
 <p><strong>Verify</strong></p>
-<p>Objective 3: check the code against the data</p>
+<p>Check the code against the data</p>
 </div>
 </div>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -941,7 +948,7 @@
 <p><strong><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Setup</strong></p>
 </div>
 <div class="callout-content">
-<p>Download and unzip the **<a href="https://downgit.github.io/#/home?url=https://github.com/UCSB-MEDS/AI-prompting-fundamentals-activity">activity materials</a>to get started on the activity. Open the folder in Positron, and open <em>claude.ai</em> in your browser or the Claude desktop app.</p>
+<p>Download and unzip the <a href="https://downgit.github.io/#/home?url=https://github.com/UCSB-MEDS/AI-prompting-fundamentals-activity">activity materials</a> to get started on the activity. Open the folder in Positron, and open <em>claude.ai</em> in your browser or the Claude desktop app.</p>
 </div>
 </div>
 </div>
@@ -1111,7 +1118,7 @@
 </div>
 <div class="callout-content">
 <ol type="1">
-<li>Which round lost the least data, and <strong>which fundamental</strong> made the difference?</li>
+<li>Which round lost the least data?</li>
 <li>In Round 4, did the model’s own answer match the check?</li>
 <li>What will you add to your prompts from now on?</li>
 </ol>
@@ -1130,9 +1137,6 @@
 </div>
 <div class="mt-rule">
 
-</div>
-<div class="ms-sub">
-<p>Write it down once: agentic coding and skills</p>
 </div>
 </section>
 <section id="you-just-did-the-same-work-four-times" class="slide level2">

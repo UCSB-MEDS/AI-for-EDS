@@ -431,39 +431,42 @@ na_added <- function(before, after, col) {
 
 ## Does being *mean* help? {.smaller}
 
+**Dobariya & Kumar (2025)** gave ChatGPT-4o 50 MC questions, each prefixed 5 ways (10 runs each, differences statistically significant):
+
 ::: {.columns}
-::: {.column width="55%"}
-**Dobariya & Kumar (2025), *Mind Your Tone***
-
-- 50 multiple-choice questions (math, science, history)
-- Each rewritten in 5 tones → **250 prompts**
-- Model: ChatGPT-4o
-
+::: {.column width="30%"}
 | Tone | Accuracy |
 |---|---|
-| Very polite | ~80.8% |
-| Very rude | ~84.8% |
-
-Rude prompts scored ~4 points higher.
+| Very polite | 80.8% |
+| Polite | 81.4% |
+| Neutral | 82.2% |
+| Rude | 82.8% |
+| Very rude | 84.8% |
 :::
 
-::: {.column width="45%"}
-**Before you start insulting Copilot…**
-
-- One model, one version, 50 questions
-- Multiple choice ≠ writing your analysis code
-- Earlier work (Yin et al., 2024) found **impolite prompts often hurt** performance on older models
-- Open question: is it rudeness, or that rude prompts are **shorter and more direct**?
-
-:::
-:::
+::: {.column width="70%"}
 
 . . .
 
+**Example prefixes add to the questions: :**
 
-::: {.notes}
-Good discussion prompt: how would you design a study to separate "rude" from "concise"? This is a reproducibility lesson too: a single-model, single-run result is a hypothesis, not a rule.
+- Very polite: *"Can you kindly consider the following problem..."*
+- Neutral: *(no prefix — just the question)*
+- Very rude: *"You poor creature, do you even know how to solve this?"*
+
+So is *rudeness* helping, or does **adding any filler hurt**?
+
+The authors flag that prompt length may matter more than tone.
+
+
+
+::: {.callout-tip}
+Be direct and skip the filler.
 :::
+:::
+:::
+
+
 
 ## {.meds-section background-color="#003660"}
 
@@ -580,7 +583,7 @@ Adapted from A. Dillman, *Yes, And… AI in Your IDE*, posit::conf(2026)
 Advance three times: data manager, then data science student, then environmental researcher. Same prompt, same data. The role decided what survived.
 :::
 
-## What the squirrels taught us {.smaller}
+## How role framing shaped the result  {.smaller}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -606,7 +609,7 @@ Advance three times: data manager, then data science student, then environmental
 
 ## Activity: Prompt makeover
 
-**Goal:** turn a weak prompt into a strong one, and *measure* the difference.
+**Goal:** turn a weak prompt into a strong one, and see how the results change.
 
 ::: {.round-grid}
 ::: {.round}
@@ -621,28 +624,28 @@ Baseline: see what you get
 
 **Add context + constraints**
 
-Objective 1: write a complete prompt
+Write a complete prompt
 :::
 ::: {.round}
 [Round 3 · 5 min]{.round-tag .r3}
 
 **Assumptions first**
 
-Objective 2: make the model show its assumptions
+Make the model show its assumptions
 :::
 ::: {.round}
 [Round 4 · 5 min]{.round-tag .r4}
 
 **Verify**
 
-Objective 3: check the code against the data
+Check the code against the data
 :::
 :::
 
 ::: {.callout-note icon="false"}
 ## {{< fa screwdriver-wrench >}} Setup
 
-Download and unzip the **[activity materials](https://downgit.github.io/#/home?url=https://github.com/UCSB-MEDS/AI-prompting-fundamentals-activity)to get started on the activity. Open the folder in Positron, and open *claude.ai* in your browser or the Claude desktop app.
+Download and unzip the [activity materials](https://downgit.github.io/#/home?url=https://github.com/UCSB-MEDS/AI-prompting-fundamentals-activity) to get started on the activity. Open the folder in Positron, and open *claude.ai* in your browser or the Claude desktop app.
 :::
 
 
@@ -765,7 +768,7 @@ If `na_after > na_before`, the code turned real observations into missing data. 
 
 ::: {.callout-note}
 ## Debrief (5 min)
-1. Which round lost the least data, and **which fundamental** made the difference?
+1. Which round lost the least data?
 2. In Round 4, did the model's own answer match the check?
 3. What will you add to your prompts from now on?
 :::
@@ -783,9 +786,7 @@ From prompts to agents
 ::: {.mt-rule}
 :::
 
-::: {.ms-sub}
-Write it down once: agentic coding and skills
-:::
+
 
 ## You just did the same work four times
 
